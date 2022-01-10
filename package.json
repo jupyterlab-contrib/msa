@@ -1,13 +1,18 @@
 {
-  "name": "msa",
+  "name": "@jlab-contrib/msa",
   "description": "Display multiple sequences",
-  "version": "0.0.0",
-  "homepage": "http://github.com/wilzbach/msa",
+  "version": "0.1.0",
+  "homepage": "http://github.com/jupyterlab-contrib/msa",
   "repository": {
     "type": "git",
-    "url": "git://github.com/wilzbach/msa"
+    "url": "git://github.com/jupyterlab-contrib/msa"
   },
   "contributors": [
+    {
+      "name": "Zachary Riedlshah",
+      "email": "git@zacharyrs.me",
+      "url": "https://zacharyrs.me"
+    },
     {
       "name": "Sebastian Wilzbach",
       "email": "sebi.wilzbach@gmail.com",
@@ -24,7 +29,7 @@
       "url": "https://www.linkedin.com/in/gyachdav"
     }
   ],
-  "author": "Sebastian Wilzbach <sebi.wilzbach@gmail.com>",
+  "author": "Zachary Riedlshah <git@zacharyrs.me>",
   "dependencies": {
     "backbone-childs": "^1.0.3",
     "backbone-thin": "^1.0.8",
@@ -108,9 +113,6 @@
   },
   "sniper": {
     "noBrowserify": true,
-    "buildJS": [
-      "https://cdn.bio.sh/msa/latest/msa.min.gz.js"
-    ],
     "js": [
       "dist/msa.js"
     ],

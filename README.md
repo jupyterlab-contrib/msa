@@ -1,9 +1,11 @@
-MSAViewer
-==========
+MSA Viewer Fork
+===============
+
+This repo contains a fork of the original MSA viewer with several bugfixes, used for the JupyterLab FASTA viewer extension.  
 
 Multiple Sequence Alignment Viewer - the MSAViewer - a BioJS component.
 
-```
+```text
           .         .
          ,8.       ,8.            d888888o.           .8.
         ,888.     ,888.         .`8888:' `88.        .888.
@@ -17,24 +19,14 @@ Multiple Sequence Alignment Viewer - the MSAViewer - a BioJS component.
 ,8'         `         `8.`8888. `Y8888P ,88P'.8'       `8. `88888.
 ```
 
-[![Build Status](https://travis-ci.org/wilzbach/msa.svg?branch=master)](https://travis-ci.org/wilzbach/msa)
-[![NPM version](http://img.shields.io/npm/v/msa.svg)](https://www.npmjs.org/package/msa)
-[![Join the chat at https://gitter.im/wilzbach/msa](https://badges.gitter.im/wilzbach/msa.svg)](https://gitter.im/wilzbach/msa?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Dependencies](https://david-dm.org/wilzbach/msa.png)](https://david-dm.org/wilzbach/msa)
+[![NPM version](http://img.shields.io/npm/v/@jlab-contrib/msa.svg)](https://www.npmjs.org/package/@jlab-contrib/msa)
 [![Code Climate](https://codeclimate.com/github/wilzbach/msa/badges/gpa.svg)](https://codeclimate.com/github/wilzbach/msa)
-[![NPM downloads](http://img.shields.io/npm/dm/msa.svg)](https://www.npmjs.org/package/msa)
+[![NPM downloads](http://img.shields.io/npm/dm/@jlab-contrib/msa.svg)](https://www.npmjs.org/package/@jlab-contrib/msa)
 
 
-```html
-<script src=//cdn.bio.sh/msa/1.0/msa.min.gz.js></script>
-```
+The original repo readme follows.
 
-Yes you can either link to the minified, gzipped CDN version or download the dev version from S3 .
-
-[![Min version](http://img.shields.io/badge/prod-35kB-blue.svg)](https://cdn.bio.sh/msa/latest/msa.min.gz.js)
-[![Dev version](http://img.shields.io/badge/dev-latest-yellow.svg)](https://cdn.bio.sh/msa/latest/msa.js)
-
-[![NPM](https://nodei.co/npm/msa.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/msa/)
+---
 
 Use it
 ------
@@ -49,15 +41,14 @@ These examples show how you could embed the MSAViewer into your page.
 [![JSBin clustal](http://img.shields.io/badge/jsbin-clustal-blue.svg)](http://jsbin.com/quvex/4/edit?js,output)
 [![JSBin large](http://img.shields.io/badge/jsbin-large-blue.svg)](http://jsbin.com/zunuko/4/edit?html,js,output)
 
-
 [Current sniper](http://workmen.biojs.net/demo/msa) with different examples
 
 #### display an MSA
 
 ![basic MSA](https://i.imgur.com/nQtfMmI.png)
 
+#### Features
 
-####  Features
 * runs purely in the Browser
 * import files in format like FASTA, Clustal, ...
 * be interactive and receive [Events](https://github.com/wilzbach/msa/wiki/Events)
@@ -75,12 +66,15 @@ These examples show how you could embed the MSAViewer into your page.
 **The following examples assume that the ```msa()``` constructor is available.**
 
 If you have loaded ```msa``` as a script in your web page with something like...
+
 ```
 <script src="//cdn.bio.sh/msa/latest/msa.min.gz.js"></script>
 ```
+
 ... then congratulations! You are ready to go.
 
 If you are using ```npm``` and are adding msa as a dependency, then you can use the following:
+
 ```
 var msa = require("msa");
 ```
@@ -124,11 +118,11 @@ m.render();
 
 ```js
 var m = msa({
-	el: rootDiv,
+ el: rootDiv,
 });
 msa.io.clustal.read("https://raw.githubusercontent.com/wilzbach/msa/master/test/dummy/samples/p53.clustalo.clustal", function(err, seqs){
-	m.seqs.reset(seqs);
-	m.render();
+ m.seqs.reset(seqs);
+ m.render();
 });
 ```
 
@@ -182,18 +176,18 @@ or ping us on [Gitter](https://gitter.im/wilzbach/msa)
 
 ### MSAViewer in Action
 
-- [VaPoR](http://vapor.biojs.tgac.ac.uk)
-- [CATH](http://www.cathdb.info/) - [example](http://cathdb.info/version/v4_1_0/superfamily/3.40.50.620/funfam/89168/alignment)
-- [Gene3D](http://gene3d.biochem.ucl.ac.uk/) - [Paper](http://nar.oxfordjournals.org/content/early/2015/11/16/nar.gkv1231.full#F1), [example](http://gene3d.biochem.ucl.ac.uk/model?smd5=408c333701ec7e889d495aeb32d7ae10;regs=81_147;fam=2.30.30.40.FF19354;mregs=81_147;cath_mod=na)
-- [msaR](https://github.com/bene200/msaR) - Visualize an MSA as interactive R plot or shiny widget
-- [MPI Bioinformatics Toolkit for protein sequence analysis](http://toolkit.tuebingen.mpg.de/sections/alignment)
-- [PolyMarker](http://www.ncbi.nlm.nih.gov/pubmed/25649618)
-- [Galaxy visualization plugin](http://www.benjamenwhite.com/2015/07/biojs2galaxy-a-step-by-step-guide)
-- [BitterDB](http://bitterdb.agri.huji.ac.il/bitterdbtest/dbbitter.php#ReceptorAlignment)
-- [@thejmazz's _JavaScript and Bioinformatics_ tutorial](https://github.com/thejmazz/js-bioinformatics-exercise)
-- [Center for Phage Technology](https://cpt.tamu.edu/clustalw-msa-and-visualisations)
-- [PHYLOViZ Online](https://online.phyloviz.net)
-- [HistoneDB 2.0](https://www.ncbi.nlm.nih.gov/projects/HistoneDB2.0/index.fcgi/browse/)
+* [VaPoR](http://vapor.biojs.tgac.ac.uk)
+* [CATH](http://www.cathdb.info/) - [example](http://cathdb.info/version/v4_1_0/superfamily/3.40.50.620/funfam/89168/alignment)
+* [Gene3D](http://gene3d.biochem.ucl.ac.uk/) - [Paper](http://nar.oxfordjournals.org/content/early/2015/11/16/nar.gkv1231.full#F1), [example](http://gene3d.biochem.ucl.ac.uk/model?smd5=408c333701ec7e889d495aeb32d7ae10;regs=81_147;fam=2.30.30.40.FF19354;mregs=81_147;cath_mod=na)
+* [msaR](https://github.com/bene200/msaR) - Visualize an MSA as interactive R plot or shiny widget
+* [MPI Bioinformatics Toolkit for protein sequence analysis](http://toolkit.tuebingen.mpg.de/sections/alignment)
+* [PolyMarker](http://www.ncbi.nlm.nih.gov/pubmed/25649618)
+* [Galaxy visualization plugin](http://www.benjamenwhite.com/2015/07/biojs2galaxy-a-step-by-step-guide)
+* [BitterDB](http://bitterdb.agri.huji.ac.il/bitterdbtest/dbbitter.php#ReceptorAlignment)
+* [@thejmazz's _JavaScript and Bioinformatics_ tutorial](https://github.com/thejmazz/js-bioinformatics-exercise)
+* [Center for Phage Technology](https://cpt.tamu.edu/clustalw-msa-and-visualisations)
+* [PHYLOViZ Online](https://online.phyloviz.net)
+* [HistoneDB 2.0](https://www.ncbi.nlm.nih.gov/projects/HistoneDB2.0/index.fcgi/browse/)
 
 Are you using the MSAViewer? Don't hesistate to make a PR and let us know!
 
@@ -224,7 +218,6 @@ m.g.colorscheme.set("scheme", "own");
 ```
 
 Have a look at the [doc](https://github.com/wilzbach/msa-colorschemes) for more info.
-
 
 ### Add features
 
@@ -300,7 +293,6 @@ m.g.zoomer.setLeftOffset(10) // jumps to column 10
 
 ### Export and save
 
-
 ```
 m.utils.export.saveAsFile(m, "all.fasta") // export seqs
 m.utils.export.saveSelection(m, "selection.fasta")
@@ -309,20 +301,19 @@ m.utils.export.saveAsImg(m,"biojs-msa.png")
 
 // share the seqs with the public = get a public link
 m.utils.export.shareLink(m, function(link){
-	window.open(link, '_blank')
+ window.open(link, '_blank')
 })
 
 // share via jalview
 var url =  m.g.config.get('url')
 if url.indexOf("localhost") || url === "dragimport"
     m.utils.export.publishWeb(m, function(link){
-    	m.utils.export.openInJalview(link, m.g.colorscheme.get("scheme"))
+     m.utils.export.openInJalview(link, m.g.colorscheme.get("scheme"))
     });
 }else{
     m.utils.export.openInJalview(url, m.g.colorscheme.get("scheme"))
 }
 ```
-
 
 ### Update attributes
 
@@ -367,7 +358,6 @@ msa.g.on("meta:click", function(data){ ... }):
 ...
 ```
 
-
 ### Config parameters in g
 
 ```
@@ -389,7 +379,7 @@ colorscheme: {
     opacity: 0.6 //opacity for the residues
 },
 columns: {
-	hidden: [] // hidden columns
+ hidden: [] // hidden columns
 }
 vis: {
     sequences: true,
