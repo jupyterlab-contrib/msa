@@ -1,7 +1,7 @@
 {
   "name": "@jlab-contrib/msa",
   "description": "Display multiple sequences",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "homepage": "http://github.com/jupyterlab-contrib/msa",
   "repository": {
     "type": "git",
