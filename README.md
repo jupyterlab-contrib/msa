@@ -1,5 +1,8 @@
-MSA Viewer Fork
-===============
+# MSA Viewer Fork
+
+[![Extension status](https://img.shields.io/badge/status-ready-success "ready to be used")](https://jupyterlab-contrib.github.io/)
+[![NPM version](http://img.shields.io/npm/v/@jlab-contrib/msa.svg)](https://www.npmjs.org/package/@jlab-contrib/msa)
+[![NPM downloads](http://img.shields.io/npm/dm/@jlab-contrib/msa.svg)](https://www.npmjs.org/package/@jlab-contrib/msa)
 
 This repo contains a fork of the original MSA viewer with several bugfixes, used for the JupyterLab FASTA viewer extension.  
 
@@ -18,10 +21,6 @@ Multiple Sequence Alignment Viewer - the MSAViewer - a BioJS component.
  ,8'       `8        `8.`8888. `8b.  ;8.`8888 .888888888. `88888.
 ,8'         `         `8.`8888. `Y8888P ,88P'.8'       `8. `88888.
 ```
-
-[![NPM version](http://img.shields.io/npm/v/@jlab-contrib/msa.svg)](https://www.npmjs.org/package/@jlab-contrib/msa)
-[![Code Climate](https://codeclimate.com/github/wilzbach/msa/badges/gpa.svg)](https://codeclimate.com/github/wilzbach/msa)
-[![NPM downloads](http://img.shields.io/npm/dm/@jlab-contrib/msa.svg)](https://www.npmjs.org/package/@jlab-contrib/msa)
 
 
 The original repo readme follows.
